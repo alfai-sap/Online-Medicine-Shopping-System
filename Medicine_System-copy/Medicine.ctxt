@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Medicine
+comment1.params=medicineId\ name\ price\ components\ sideEffects\ stock
+comment1.target=Medicine(int,\ java.lang.String,\ double,\ java.lang.String,\ java.lang.String,\ int)
+comment2.params=
+comment2.target=int\ getStock()
+comment3.params=
+comment3.target=double\ getPrice()
+comment4.params=
+comment4.target=java.lang.String\ getDetails()
+comment5.params=
+comment5.target=int\ getMedicineId()
+comment6.params=quantity
+comment6.target=void\ updateStock(int)
+numComments=7

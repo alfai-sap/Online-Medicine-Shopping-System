@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Order
+comment1.params=orderId\ customer\ cart\ totalAmount\ status
+comment1.target=Order(int,\ Customer,\ Cart,\ double,\ java.lang.String)
+comment10.params=
+comment10.target=double\ getTotalAmount()
+comment11.params=
+comment11.target=java.lang.String\ getStatus()
+comment2.params=
+comment2.target=void\ placeOrder()
+comment3.params=
+comment3.target=java.lang.String\ trackOrder()
+comment4.params=
+comment4.target=void\ cancelOrder()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment6.params=
+comment6.target=java.lang.String\ cartDetails()
+comment7.params=
+comment7.target=int\ getOrderId()
+comment8.params=
+comment8.target=Customer\ getCustomer()
+comment9.params=
+comment9.target=Cart\ getCart()
+numComments=12

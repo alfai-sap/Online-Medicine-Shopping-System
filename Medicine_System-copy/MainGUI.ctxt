@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=MainGUI
+comment1.params=
+comment1.target=MainGUI()
+comment2.params=
+comment2.target=void\ initializeLoginPanel()
+comment3.params=
+comment3.target=void\ initializeSignupPanel()
+comment4.params=
+comment4.target=void\ handleLogin()
+comment5.params=
+comment5.target=void\ handleSignup()
+comment6.params=email
+comment6.target=boolean\ validateEmail(java.lang.String)
+comment7.params=password
+comment7.target=java.lang.String\ hashPassword(java.lang.String)
+comment8.params=panelName
+comment8.target=void\ switchToPanel(java.lang.String)
+comment9.params=args
+comment9.target=void\ main(java.lang.String[])
+numComments=10
