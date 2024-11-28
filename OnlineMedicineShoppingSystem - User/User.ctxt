@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=User
+comment1.params=userId\ name\ email\ password
+comment1.target=User(int,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=name\ email\ password
+comment2.target=boolean\ register(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment3.params=email\ password
+comment3.target=boolean\ login(java.lang.String,\ java.lang.String)
+comment4.params=email\ password
+comment4.target=boolean\ validateInput(java.lang.String,\ java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getName()
+numComments=6
