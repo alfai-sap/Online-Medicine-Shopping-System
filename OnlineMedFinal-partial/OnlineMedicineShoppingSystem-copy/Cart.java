@@ -1,9 +1,12 @@
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Cart {
+public class Cart implements Serializable{
+    private static final long serialVersionUID = 1L;
+    
     private ArrayList<Medicine> medicines; // Stores the unique medicines in the cart
     private ArrayList<Integer> quantities; // Stores the corresponding quantities for each medicine
-    private User user; // New field to store the user associated with this cart
+    private transient User user; // Mark non-serializable fields as transient
     private double discountPercentage;
 
     public Cart(User user) {
@@ -70,6 +73,7 @@ public class Cart {
         }
         return totalPrice - (totalPrice * discountPercentage / 100);
     }
+
 
     public String displayCart() {
         StringBuilder cartDetails = new StringBuilder();

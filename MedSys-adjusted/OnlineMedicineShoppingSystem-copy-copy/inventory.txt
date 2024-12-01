@@ -1,0 +1,2 @@
+2,biogesic,23.00,lads,dsadad,dsadsadsad,31,C:\Users\CORE I7\Documents\GitHub\web dev\Online-Medicine-Shopping-System\Medicine_System-copy\images\med3.jpg
+2,alaxan,25.00,sadasddas,dasdd,dsadsdad,52,C:\Users\CORE I7\Documents\GitHub\web dev\Online-Medicine-Shopping-System\Medicine_System-copy\images\med2.jpg

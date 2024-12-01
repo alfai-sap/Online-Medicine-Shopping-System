@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Order
-comment1.params=orderId\ customer\ customerCart\ status
-comment1.target=Order(int,\ Customer,\ Cart,\ java.lang.String)
+comment1.params=customer\ customerCart\ status
+comment1.target=Order(Customer,\ Cart,\ java.lang.String)
 comment2.params=
 comment2.target=int\ getOrderId()
 comment3.params=

@@ -39,9 +39,9 @@ public class AdminPanelGUI {
         JButton manageUsersButton = new JButton("Manage Users");
         manageUsersButton.addActionListener(e -> manageUsersDialog());
         
-        // New Button to view orders
         JButton viewOrdersButton = new JButton("View Orders");
-        viewOrdersButton.addActionListener(e -> viewOrdersDialog()); // Opens the orders list dialog
+        viewOrdersButton.addActionListener(e -> showOrderHistory());
+        
 
 
         JButton logoutButton = new JButton("Logout");
@@ -56,7 +56,8 @@ public class AdminPanelGUI {
         buttonPanel.add(deleteMedicineButton);
         buttonPanel.add(logoutButton); // Add Logout Button
         buttonPanel.add(manageUsersButton);
-        buttonPanel.add(viewOrdersButton);  
+        buttonPanel.add(viewOrdersButton); 
+        
 
         // Layout the panel with the inventory details in the center and buttons at the bottom
         frame.add(new JScrollPane(inventoryDetails), BorderLayout.CENTER);
@@ -66,21 +67,52 @@ public class AdminPanelGUI {
         frame.setVisible(true);
     }
     
+    private void showOrderHistory() {
+        ArrayList<Order> allOrders = OrderManager.loadAllOrders();
     
+        JDialog dialog = new JDialog(frame, "All Orders", true);
+        dialog.setSize(600, 500);
+        dialog.setLayout(new BorderLayout());
+    
+        JPanel orderPanel = new JPanel();
+        orderPanel.setLayout(new BoxLayout(orderPanel, BoxLayout.Y_AXIS));
+    
+        if (allOrders.isEmpty()) {
+            orderPanel.add(new JLabel("No orders found."));
+        } else {
+            for (Order order : allOrders) {
+                JPanel orderCard = new JPanel(new BorderLayout());
+                orderCard.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+    
+                JTextArea orderDetails = new JTextArea(order.toString());
+                orderDetails.setEditable(false);
+                orderCard.add(new JScrollPane(orderDetails), BorderLayout.CENTER);
+    
+                orderPanel.add(orderCard);
+            }
+        }
+    
+        dialog.add(new JScrollPane(orderPanel), BorderLayout.CENTER);
+    
+        JButton closeButton = new JButton("Close");
+        closeButton.addActionListener(e -> dialog.dispose());
+        dialog.add(closeButton, BorderLayout.SOUTH);
+    
+        dialog.setLocationRelativeTo(frame);
+        dialog.setVisible(true);
+    }
+
     
     // Method to view orders dialog
     private void viewOrdersDialog() {
         JDialog dialog = new JDialog(frame, "Orders List", true);
         dialog.setSize(800, 600);
         dialog.setLayout(new BorderLayout());
-
-        // Create a table model to display orders
+    
         String[] columnNames = {"Order ID", "Customer Name", "Order Date", "Status", "Total Amount"};
         DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
-
-        // Populate the table with order data
-        List<User> users = userManager.getAllUsers(); // Works with List<User>
-        for (User user : users) {
+    
+        for (User user : userManager.getAllUsers()) {
             if (user instanceof Customer) {
                 Customer customer = (Customer) user;
                 for (Order order : customer.getOrderHistory()) {
@@ -95,24 +127,21 @@ public class AdminPanelGUI {
                 }
             }
         }
-
-        // Create the table
+    
         JTable orderTable = new JTable(tableModel);
-
-        // Add table to a scroll pane
         JScrollPane scrollPane = new JScrollPane(orderTable);
         dialog.add(scrollPane, BorderLayout.CENTER);
-
-        // Close button at the bottom
+    
         JButton closeButton = new JButton("Close");
         closeButton.addActionListener(e -> dialog.dispose());
         JPanel buttonPanel = new JPanel();
         buttonPanel.add(closeButton);
-
+    
         dialog.add(buttonPanel, BorderLayout.SOUTH);
         dialog.setLocationRelativeTo(frame);
         dialog.setVisible(true);
     }
+
 
     
     private void manageUsersDialog() {

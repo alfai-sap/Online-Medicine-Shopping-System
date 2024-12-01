@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Cart
+comment1.params=user
+comment1.target=Cart(User)
+comment10.params=discountPercentage
+comment10.target=void\ applyDiscount(double)
+comment2.params=
+comment2.target=User\ getUser()
+comment3.params=
+comment3.target=java.util.ArrayList\ getMedicines()
+comment4.params=medicine
+comment4.target=int\ getQuantity(Medicine)
+comment5.params=medicine\ quantity
+comment5.target=void\ addMedicine(Medicine,\ int)
+comment6.params=medicine
+comment6.target=void\ removeMedicine(Medicine)
+comment7.params=
+comment7.target=void\ clearCart()
+comment8.params=
+comment8.target=double\ calculateTotalPrice()
+comment9.params=
+comment9.target=java.lang.String\ displayCart()
+numComments=11

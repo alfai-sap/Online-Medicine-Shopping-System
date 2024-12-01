@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=UserManager
+comment1.params=
+comment1.target=UserManager()
+comment10.params=email
+comment10.target=boolean\ deleteUser(java.lang.String)
+comment11.params=
+comment11.target=java.util.HashMap\ getUsers()
+comment12.params=
+comment12.target=java.util.HashMap\ getUserProfiles()
+comment2.params=
+comment2.target=UserManager\ getInstance()
+comment3.params=
+comment3.target=void\ saveUsers()
+comment4.params=
+comment4.target=void\ loadUsers()
+comment5.params=
+comment5.target=void\ initializeDefaultAdmin()
+comment6.params=name\ email\ password\ isAdmin
+comment6.target=boolean\ addUser(java.lang.String,\ java.lang.String,\ java.lang.String,\ boolean)
+comment7.params=email\ password
+comment7.target=User\ validateUser(java.lang.String,\ java.lang.String)
+comment8.params=password
+comment8.target=java.lang.String\ hashPassword(java.lang.String)
+comment9.params=
+comment9.target=java.util.List\ getAllUsers()
+numComments=13

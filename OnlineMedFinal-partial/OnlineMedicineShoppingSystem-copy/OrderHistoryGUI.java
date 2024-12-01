@@ -9,6 +9,7 @@ public class OrderHistoryGUI {
     private Customer customer;
 
     public OrderHistoryGUI(Customer customer) {
+        this.customer = customer; // Assign the customer
         JFrame frame = new JFrame("Order History");
         frame.setSize(600, 400);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

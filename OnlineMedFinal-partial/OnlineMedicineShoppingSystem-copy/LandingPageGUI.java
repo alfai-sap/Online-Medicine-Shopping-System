@@ -50,6 +50,7 @@ public class LandingPageGUI {
             }
         });
 
+
         bottomPanel.add(viewOrderHistoryButton);
 
 

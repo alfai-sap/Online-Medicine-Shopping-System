@@ -1,15 +1,25 @@
 import java.time.LocalDateTime;
+import java.io.Serializable;
 
-public class Order {
+public class Order implements Serializable{
+    private static final long serialVersionUID = 1L;
+    private static int idCounter = OrderIdManager.loadCounter(); // Load from file
+
+    static {
+        // Save the counter when the application shuts down
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            OrderIdManager.saveCounter(idCounter);
+        }));
+    }
     private int orderId;
-    private Customer customer;
+    private transient Customer customer; // Transient since it won't be serialized
     private Cart cart;
     private double totalAmount;
     private String status;
     private LocalDateTime orderDate;
 
-    public Order(int orderId, Customer customer, Cart customerCart, String status) {
-        this.orderId = orderId;
+    public Order(Customer customer, Cart customerCart, String status) {
+        this.orderId = ++idCounter; // Increment and assign a unique ID
         this.customer = customer;
 
         // Create a new Cart instance for this order
@@ -18,7 +28,7 @@ public class Order {
             this.cart.addMedicine(medicine, customerCart.getQuantity(medicine));
         }
 
-        this.totalAmount = this.cart.calculateTotalPrice();
+        this.totalAmount = this.cart.calculateTotalPrice(); 
         this.status = status;
         this.orderDate = LocalDateTime.now();
     }
@@ -76,4 +86,6 @@ public class Order {
 
         return orderDetails.toString();
     }
+    
+
 }
