@@ -2,65 +2,68 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PaymentGUI {
-    private JFrame frame;
-    private double totalAmount;
-    private Cart cart; // Add cart as a field
+    private JFrame frame;  // The main window of the GUI
+    private double totalAmount;  // The total amount to be paid
+    private Cart cart;  // The shopping cart associated with the user
 
-    // Modified constructor to accept Cart
+    // Modified constructor to accept the cart and totalAmount
     public PaymentGUI(double totalAmount, Cart cart) {
-        this.totalAmount = totalAmount;
-        this.cart = cart; // Store the cart
+        this.totalAmount = totalAmount;  // Set the total amount to be paid
+        this.cart = cart;  // Store the cart object for further use
 
-        frame = new JFrame("Payment - Checkout");
-        frame.setSize(600, 400);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setLayout(new GridLayout(5, 1, 10, 10));
+        // Initialize the JFrame
+        frame = new JFrame("Payment - Checkout");  // Set the title of the frame
+        frame.setSize(600, 400);  // Set the size of the frame
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  // Close the window when the user closes it
+        frame.setLayout(new GridLayout(5, 1, 10, 10));  // Set the layout of the frame
 
-        // Display Total Amount
+        // Display the total amount label
         JLabel amountLabel = new JLabel("Total Amount: PHP " + totalAmount, JLabel.CENTER);
-        amountLabel.setFont(new Font("SansSerif", Font.PLAIN, 18));
-        frame.add(amountLabel);
+        amountLabel.setFont(new Font("SansSerif", Font.PLAIN, 18));  // Set the font size and style for the label
+        frame.add(amountLabel);  // Add the label to the frame
 
-        // Payment Method Selection
+        // Create a combo box to select the payment method
         JComboBox<String> paymentMethodComboBox = new JComboBox<>(new String[]{"Credit Card", "Cash", "Gcash", "Bank Transfer"});
-        frame.add(new JLabel("Select Payment Method:", JLabel.CENTER));
-        frame.add(paymentMethodComboBox);
+        frame.add(new JLabel("Select Payment Method:", JLabel.CENTER));  // Add a label above the combo box
+        frame.add(paymentMethodComboBox);  // Add the combo box to the frame
 
-        // Confirm Payment Button
+        // Add a button to confirm payment
         JButton confirmPaymentButton = new JButton("Confirm Payment");
-        confirmPaymentButton.addActionListener(e -> {
-            String paymentMethod = (String) paymentMethodComboBox.getSelectedItem();
-            handlePayment(paymentMethod);
+        confirmPaymentButton.addActionListener(e -> {  // When the button is clicked, handle the payment
+            String paymentMethod = (String) paymentMethodComboBox.getSelectedItem();  // Get the selected payment method
+            handlePayment(paymentMethod);  // Call handlePayment to process the payment
         });
-        frame.add(confirmPaymentButton);
+        frame.add(confirmPaymentButton);  // Add the button to the frame
 
+        // Make the frame visible to the user
         frame.setVisible(true);
     }
 
+    // Method to handle the payment processing
     private void handlePayment(String paymentMethod) {
-        double totalAmount = cart.calculateTotalPrice(); // Always fetch the latest total
+        double totalAmount = cart.calculateTotalPrice();  // Fetch the latest total from the cart
     
-        // Initialize payment and process it
-        Payment payment = new Payment(totalAmount, paymentMethod);
-        payment.processPayment();
+        // Initialize the Payment object and process it
+        Payment payment = new Payment(totalAmount, paymentMethod);  // Create a new payment object
+        payment.processPayment();  // Process the payment
+
+        // Check the payment status after processing
+        if ("Completed".equals(payment.getPaymentStatus())) {  // If the payment is successful
+            if (cart.getUser() instanceof Customer) {  // Ensure the user is a Customer
+                Customer customer = (Customer) cart.getUser();  // Cast the user to Customer
     
-        if ("Completed".equals(payment.getPaymentStatus())) {
-            if (cart.getUser() instanceof Customer) {
-                Customer customer = (Customer) cart.getUser();
-    
-                // Place the order and clear the cart
-                Order newOrder = customer.checkout();
-                JOptionPane.showMessageDialog(frame, "Payment successful! Order placed.\n" +
-                        "Order ID: " + newOrder.getOrderId() +
-                        "\nTotal Amount: PHP " + totalAmount);
+                // Place the order and clear the cart after payment
+                Order newOrder = customer.checkout();  // Create a new order using the customer's checkout method
+                JOptionPane.showMessageDialog(frame, "Payment successful! Order placed.\n" +  // Show a success message
+                        "Order ID: " + newOrder.getOrderId() +  // Display the order ID
+                        "\nTotal Amount: PHP " + totalAmount);  // Display the total amount of the order
             } else {
                 JOptionPane.showMessageDialog(frame, "Payment successful, but user is not a customer.");
             }
         } else {
-            JOptionPane.showMessageDialog(frame, "Payment failed. Please try again.");
+            JOptionPane.showMessageDialog(frame, "Payment failed. Please try again.");  // If payment failed, show an error message
         }
     
-        frame.dispose(); // Close the Payment GUI
+        frame.dispose();  // Close the Payment GUI window after processing the payment
     }
-
 }

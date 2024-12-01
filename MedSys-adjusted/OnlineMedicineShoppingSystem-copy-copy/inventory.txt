@@ -1,2 +1,2 @@
-2,biogesic,23.00,lads,dsadad,dsadsadsad,31,C:\Users\CORE I7\Documents\GitHub\web dev\Online-Medicine-Shopping-System\Medicine_System-copy\images\med3.jpg
-2,alaxan,25.00,sadasddas,dasdd,dsadsdad,52,C:\Users\CORE I7\Documents\GitHub\web dev\Online-Medicine-Shopping-System\Medicine_System-copy\images\med2.jpg
+1,Glowcaps,50.00,dsad,dsdd,dasdsad,13,C:\Users\CORE I7\Documents\GitHub\web dev\Online-Medicine-Shopping-System\Medicine_System-copy\images\med2.jpg
+2,mahoraga,152.00,dasdas,dadasd,daddasdsad,48,C:\Users\CORE I7\Documents\GitHub\web dev\Online-Medicine-Shopping-System\OnlineMedicineShoppingSystem - User\images\paracetamol.png
