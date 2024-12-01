@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=AdminPanel
-comment1.params=
-comment1.target=AdminPanel()
-comment2.params=
-comment2.target=void\ populateProductDatabase()
-comment3.params=
-comment3.target=javax.swing.JPanel\ getPanel()
-numComments=4

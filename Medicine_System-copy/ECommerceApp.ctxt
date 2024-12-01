@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=ECommerceApp
-comment1.params=args
-comment1.target=void\ main(java.lang.String[])
-comment2.params=user\ role
-comment2.target=void\ run(User,\ java.lang.String)
-numComments=3
