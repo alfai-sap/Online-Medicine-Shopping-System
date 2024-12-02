@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=AdminPanelGUI
+comment1.params=inventory\ landingPageGUI
+comment1.target=AdminPanelGUI(Inventory,\ LandingPageGUI)
+comment2.params=
+comment2.target=void\ showOrderHistory()
+comment3.params=
+comment3.target=void\ viewOrdersDialog()
+comment4.params=
+comment4.target=void\ manageUsersDialog()
+comment5.params=
+comment5.target=void\ logout()
+comment6.params=
+comment6.target=void\ refreshInventoryDisplay()
+comment7.params=
+comment7.target=void\ addMedicineDialog()
+comment8.params=
+comment8.target=void\ updateMedicineDialog()
+comment9.params=
+comment9.target=void\ deleteMedicineDialog()
+numComments=10

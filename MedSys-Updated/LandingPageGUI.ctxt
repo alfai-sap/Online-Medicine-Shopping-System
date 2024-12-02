@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=LandingPageGUI
+comment1.params=inventory\ cart
+comment1.target=LandingPageGUI(Inventory,\ Cart)
+comment2.params=
+comment2.target=void\ updateMedicinesPanel()
+comment3.params=medicine
+comment3.target=void\ handleAddToCart(Medicine)
+comment4.params=user
+comment4.target=void\ handleOrderHistory(User)
+comment5.params=
+comment5.target=void\ logout()
+comment6.params=text\ action
+comment6.target=javax.swing.JButton\ createButton(java.lang.String,\ java.awt.event.ActionListener)
+comment7.params=
+comment7.target=javax.swing.JPanel\ getPanel()
+numComments=8

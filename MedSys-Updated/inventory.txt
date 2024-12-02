@@ -1,0 +1,3 @@
+1,Bioflu,20.00,use only when you have fever,acid,pregnancy,301,C:\Users\sonny\bluej\MedSys\MedSys\images\med3.jpg
+2,Bioflu,20.00,use only when you have fever,acid,pregnancy,17,C:\Users\sonny\bluej\MedSys\MedSys\images\paracetamol.png
+3,Bioflu,10.00,for cold,malunggay,none,197,C:\Users\sonny\bluej\MedSys\MedSys\images\med3.jpg
