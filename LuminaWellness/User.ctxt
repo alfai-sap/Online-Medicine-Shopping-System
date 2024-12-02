@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=User
+comment1.params=userId\ name\ email\ password
+comment1.target=User(int,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ to\ initialize\ a\ User\ object\ with\ its\ details.\r\n
+comment2.params=name\ email\ password
+comment2.target=boolean\ register(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.text=\r\n\ Registers\ a\ user\ by\ validating\ input\ and\ assigning\ values.\r\n\ @param\ name\ The\ name\ of\ the\ user.\r\n\ @param\ email\ The\ email\ of\ the\ user.\r\n\ @param\ password\ The\ password\ of\ the\ user.\r\n\ @return\ True\ if\ registration\ is\ successful,\ otherwise\ false.\r\n
+comment3.params=email\ password
+comment3.target=boolean\ login(java.lang.String,\ java.lang.String)
+comment3.text=\r\n\ Logs\ in\ a\ user\ by\ matching\ the\ provided\ email\ and\ password.\r\n\ @param\ email\ The\ email\ to\ log\ in.\r\n\ @param\ password\ The\ password\ to\ log\ in.\r\n\ @return\ True\ if\ both\ email\ and\ password\ match;\ otherwise,\ false.\r\n
+comment4.params=email\ password
+comment4.target=boolean\ validateInput(java.lang.String,\ java.lang.String)
+comment4.text=\r\n\ Validates\ email\ format\ and\ password\ length.\r\n\ @param\ email\ The\ email\ to\ validate.\r\n\ @param\ password\ The\ password\ to\ validate.\r\n\ @return\ True\ if\ the\ email\ and\ password\ are\ valid,\ otherwise\ false.\r\n
+comment5.params=
+comment5.target=java.lang.String\ getName()
+comment5.text=\r\n\ Retrieves\ the\ user's\ name.\r\n\ @return\ The\ user's\ name.\r\n
+comment6.params=
+comment6.target=java.lang.String\ getId()
+comment6.text=\r\n\ Retrieves\ the\ user's\ ID\ as\ a\ string.\r\n\ @return\ The\ user's\ ID\ as\ a\ string.\r\n
+comment7.params=
+comment7.target=java.lang.String\ getEmail()
+comment7.text=\r\n\ Retrieves\ the\ user's\ email.\r\n\ @return\ The\ user's\ email.\r\n
+numComments=8

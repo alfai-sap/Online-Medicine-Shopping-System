@@ -1,0 +1,3 @@
+2,lumina,222.00,asda,asdas,dasdsad,8,C:\Users\CORE I7\Documents\GitHub\web dev\Online-Medicine-Shopping-System\MedSys-Updated\images\med1.jpg
+2,paracetamol,55.00,dasd,fgfdf,fda,9,C:\Users\CORE I7\Documents\GitHub\web dev\Online-Medicine-Shopping-System\MedSys-Updated\images\med2.jpg
+3,fsdfsdf,232.00,dsdsaddsa,dsadsad,sadasdd,333,C:\Users\CORE I7\Documents\GitHub\web dev\Online-Medicine-Shopping-System\MedSys-Updated\images\med3.jpg

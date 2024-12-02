@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=OrderHistoryGUI
+comment1.params=customer
+comment1.target=OrderHistoryGUI(Customer)
+comment1.text=\r\n\ Constructor\ to\ initialize\ and\ display\ the\ Order\ History\ GUI.\r\n\r\n\ @param\ customer\ the\ customer\ whose\ order\ history\ is\ to\ be\ shown.\r\n
+comment2.params=
+comment2.target=void\ initializeFrame()
+comment2.text=\r\n\ Initializes\ the\ JFrame\ for\ the\ order\ history\ window.\r\n
+comment3.params=
+comment3.target=void\ populateOrderHistory()
+comment3.text=\r\n\ Populates\ the\ order\ history\ panel\ with\ the\ customer's\ orders.\r\n
+comment4.params=order
+comment4.target=javax.swing.JPanel\ createOrderPanel(Order)
+comment4.text=\r\n\ Creates\ a\ panel\ displaying\ the\ details\ of\ an\ individual\ order.\r\n\r\n\ @param\ order\ the\ order\ to\ display.\r\n\ @return\ the\ panel\ containing\ the\ order\ details.\r\n
+comment5.params=order
+comment5.target=javax.swing.JButton\ createTrackButton(Order)
+comment5.text=\r\n\ Creates\ the\ "Track"\ button\ for\ each\ order.\r\n\r\n\ @param\ order\ the\ order\ to\ track.\r\n\ @return\ the\ "Track"\ button.\r\n
+comment6.params=order
+comment6.target=javax.swing.JButton\ createCancelButton(Order)
+comment6.text=\r\n\ Creates\ the\ "Cancel"\ button\ for\ each\ order.\r\n\r\n\ @param\ order\ the\ order\ to\ cancel.\r\n\ @return\ the\ "Cancel"\ button.\r\n
+numComments=7

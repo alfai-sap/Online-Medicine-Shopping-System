@@ -1,2 +1,0 @@
-2,biogesic,15.00,bio,extract papaya,tulog,11,C:\Users\CORE I7\Documents\GitHub\web dev\Online-Medicine-Shopping-System\Medicine_System-copy\images\med2.jpg
-2,biogesic,15.00,lads,dsadad,dsadsadsad,0,C:\Users\CORE I7\Documents\GitHub\web dev\Online-Medicine-Shopping-System\Medicine_System-copy\images\med3.jpg

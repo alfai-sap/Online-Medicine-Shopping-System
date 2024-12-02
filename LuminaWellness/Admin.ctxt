@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Admin
+comment0.text=\r\n\ Represents\ an\ administrator\ with\ the\ ability\ to\ manage\ inventory\ and\ view\ orders.\r\n\ Inherits\ from\ the\ User\ class.\r\n
+comment1.params=userId\ name\ email\ password
+comment1.target=Admin(int,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Initializes\ an\ Admin\ object\ with\ user\ details.\r\n\r\n\ @param\ userId\ \ \ \ Unique\ identifier\ for\ the\ admin.\r\n\ @param\ name\ \ \ \ \ \ Name\ of\ the\ admin.\r\n\ @param\ email\ \ \ \ \ Email\ of\ the\ admin.\r\n\ @param\ password\ \ Password\ of\ the\ admin.\r\n
+comment2.params=medicine
+comment2.target=void\ addMedicine(Medicine)
+comment2.text=\r\n\ Adds\ a\ new\ medicine\ to\ the\ inventory.\r\n\r\n\ @param\ medicine\ The\ medicine\ to\ add.\r\n
+comment3.params=medicine
+comment3.target=void\ updateMedicine(Medicine)
+comment3.text=\r\n\ Updates\ the\ stock\ of\ an\ existing\ medicine\ in\ the\ inventory.\r\n\r\n\ @param\ medicine\ The\ medicine\ with\ updated\ stock\ information.\r\n
+comment4.params=
+comment4.target=void\ manageStock()
+comment4.text=\r\n\ Displays\ the\ current\ stock\ in\ the\ inventory.\r\n
+comment5.params=orders
+comment5.target=void\ viewAllOrders(java.util.ArrayList)
+comment5.text=\r\n\ Views\ all\ orders\ placed\ by\ users.\r\n\r\n\ @param\ orders\ The\ list\ of\ all\ orders.\r\n
+numComments=6
